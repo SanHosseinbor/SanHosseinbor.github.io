@@ -1,0 +1,39 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "title": {
+      "text": "House mortgage approvals",
+      "subtitle":"New cases by publish date, rolling rate",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"},
+  
+    
+    "data": {
+      "url": "https://raw.githubusercontent.com/SanHosseinbor/SanHosseinbor.github.io/main/House%20mortgage%20approvals.csv",
+      "format": {"type": "csv"}
+    },
+   
+    "height": 400,
+    "width": 500,
+   
+    "mark": {"type": "line", "point": false},
+    
+    "encoding": {
+      
+      "x": {
+        "field": "Day",
+        "type": "temporal",
+        "title": null,
+        "axis": {"grid": false}},
+   
+      "y": {
+        "field": "Sales expectation", 
+        "type": "quantitative",
+        "title": null,
+        "axis": {"grid": false}}
+   
+     }
+  }
+  
